@@ -91,6 +91,6 @@ public class TestCase001 {
     @AfterMethod
     public void quit()
     {
-//        getDriver().quit();
+        getDriver().quit();
     }
 }

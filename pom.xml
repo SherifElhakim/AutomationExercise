@@ -5,14 +5,14 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>com.example</groupId>
-  <artifactId>Base_Template</artifactId>
+  <artifactId>AutomationExercise</artifactId>
   <version>1.0-SNAPSHOT</version>
-  <name>SwagLabs_Automation</name>
+  <name>AutomationExercise</name>
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <maven.compiler.target>23</maven.compiler.target>
-    <maven.compiler.source>23</maven.compiler.source>
+    <maven.compiler.target>21</maven.compiler.target>
+    <maven.compiler.source>21</maven.compiler.source>
 <aspectj.version>1.9.22</aspectj.version>
     <allure.version>2.27.0</allure.version>  </properties>
 

@@ -18,7 +18,7 @@ import java.time.Duration;
 import static DriverFactory.DriverFactory.getDriver;
 
 @Listeners({IinvokedListenerClass.class, ITestResultListenerClass.class})
-public class TestCase005 {
+public class TestCase006 {
     @BeforeMethod
     public void setUp()
     {
@@ -47,7 +47,7 @@ public class TestCase005 {
 
     @AfterMethod
     public void quit()
-   {
+    {
         getDriver().quit();
     }
 }

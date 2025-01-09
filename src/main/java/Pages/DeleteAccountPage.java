@@ -8,6 +8,7 @@ public class DeleteAccountPage {
     private WebDriver driver;
     public DeleteAccountPage(WebDriver driver) {this.driver = driver;}
 
+    //Locators
     private final By AccountDeletedText = By.xpath("//b[text()='Account Deleted!']");
     private final By ContinueButton = By.xpath("//a[@data-qa='continue-button']");
 

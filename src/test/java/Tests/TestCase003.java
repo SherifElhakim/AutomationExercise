@@ -31,8 +31,6 @@ public class TestCase003 {
         DriverFactory.setupDriver("chrome");
         DriverFactory.getDriver().manage().window().maximize();
         DriverFactory.getDriver().get("https://www.automationexercise.com/");
-        LogsUtils.info("Page is redirected to URL");
-        getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
     }
 
     @Test

@@ -1,0 +1,3 @@
+[INFO] 29-12-2024 02:19:51 [main] [Tests.TestCase005.setUp(TestCase005.java:28)] - Page is redirected to URL
+[INFO] 29-12-2024 02:19:51 [main] [Listeners.ITestResultListenerClass.onTestStart(ITestResultListenerClass.java:11)] - Test Case RegisterUserUsingExistingEmail Started
+[INFO] 29-12-2024 02:19:54 [main] [Listeners.ITestResultListenerClass.onTestSuccess(ITestResultListenerClass.java:16)] - Test Case RegisterUserUsingExistingEmail Passed

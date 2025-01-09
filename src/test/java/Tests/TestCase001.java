@@ -36,7 +36,7 @@ public class TestCase001 {
     }
 
     @Test
-    public void RegisterUser() {
+    public void RegisterUser_ThenDelete() {
         //Verifying Visibility of HomePage
         Assert.assertTrue(new HomePage(getDriver()).VerifyHomePageVisibility());
 
@@ -46,7 +46,7 @@ public class TestCase001 {
 
         //Entering Unique Username and Email and clicking Signup Button
         LogsUtils.info("Username For this Test Case is " + UniqueSignupName);
-        LogsUtils.info("Username For this Test Case is " + UniqueSignupEmail);
+        LogsUtils.info("Email For this Test Case is " + UniqueSignupEmail);
         new LoginPage(getDriver()).SetSignupName(UniqueSignupName)
                 .SetSignupEmail(UniqueSignupEmail)
                 .ClickSignupButton();

@@ -36,6 +36,7 @@ public class SignupPage {
     private final By ZipCodeTextFieldLocator = By.xpath("//input[@data-qa='zipcode']");
     private final By MobileTextFieldLocator = By.xpath("//input[@data-qa='mobile_number']");
     private final By CreateAccountButtonLocator = By.xpath("//button[@data-qa='create-account']");
+    private final By EmailExistsMsg = By.xpath("//p[text()='Email Address already exist!']");
 
     public boolean CheckEnterAccInfoVisibility()
     {
@@ -161,4 +162,5 @@ public class SignupPage {
         Util.ClickElement(driver, CreateAccountButtonLocator);
         return new AccountCreatedPage(driver);
     }
+
 }

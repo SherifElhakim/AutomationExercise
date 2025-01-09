@@ -1,0 +1,3 @@
+[INFO] 28-12-2024 01:36:22 [main] [Tests.TestCase003.setUp(TestCase003.java:30)] - Page is redirected to URL
+[INFO] 28-12-2024 01:36:22 [main] [Listeners.ITestResultListenerClass.onTestStart(ITestResultListenerClass.java:11)] - Test Case LoginUsingIncorrectData Started
+[INFO] 28-12-2024 01:36:24 [main] [Listeners.ITestResultListenerClass.onTestSuccess(ITestResultListenerClass.java:16)] - Test Case LoginUsingIncorrectData Passed

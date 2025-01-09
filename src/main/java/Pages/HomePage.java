@@ -16,6 +16,7 @@ public class HomePage  {
     private final By SignupLoginButton = By.xpath("//a[@href='/login']");
     private final By LoggedInAsText = By.className("fa-user");
     private final By DeleteAccountButton = By.className("fa-trash-o");
+    private final By logoutButton = By.xpath("//a[@href='/logout']");
 
     public boolean VerifyHomePageVisibility()
     {
@@ -42,6 +43,12 @@ public class HomePage  {
     {
         Util.ClickElement(driver, DeleteAccountButton);
         return new DeleteAccountPage(driver);
+    }
+
+    public LoginPage ClickLogoutButton()
+    {
+        Util.ClickElement(driver, logoutButton);
+        return new LoginPage(driver);
     }
 
 }

@@ -1,0 +1,3 @@
+[INFO] 28-12-2024 23:03:56 [main] [Tests.TestCase002.setUp(TestCase002.java:29)] - Page is redirected to URL
+[INFO] 28-12-2024 23:03:56 [main] [Listeners.ITestResultListenerClass.onTestStart(ITestResultListenerClass.java:11)] - Test Case LoginUsingExistingAccount Started
+[INFO] 28-12-2024 23:03:59 [main] [Listeners.ITestResultListenerClass.onTestSuccess(ITestResultListenerClass.java:16)] - Test Case LoginUsingExistingAccount Passed

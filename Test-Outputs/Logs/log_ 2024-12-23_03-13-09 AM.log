@@ -1,0 +1,4 @@
+[INFO] 23-12-2024 03:13:09 [main] [Tests.TestCase001.setUp(TestCase001.java:34)] - Page is redirected to URL
+[INFO] 23-12-2024 03:13:09 [main] [Listeners.ITestResultListenerClass.onTestStart(ITestResultListenerClass.java:11)] - Test Case RegisterUser Started
+[INFO] 23-12-2024 03:13:11 [main] [Tests.TestCase001.RegisterUser(TestCase001.java:48)] - Username For this Test Case is User2024-12-23-3-13-00AM
+[INFO] 23-12-2024 03:13:11 [main] [Tests.TestCase001.RegisterUser(TestCase001.java:49)] - Username For this Test Case is Email@gmail.com2024-12-23-3-13-00AM

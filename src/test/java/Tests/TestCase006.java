@@ -13,12 +13,16 @@ import Listeners.ITestResultListenerClass;
 import Listeners.IinvokedListenerClass;
 
 import java.io.FileNotFoundException;
+import java.nio.file.Paths;
 import java.time.Duration;
 
 import static DriverFactory.DriverFactory.getDriver;
 
 @Listeners({IinvokedListenerClass.class, ITestResultListenerClass.class})
 public class TestCase006 {
+
+    private final String filePath = Paths.get("src/test/resources/ForTestingAttachmentsUpload.txt").toAbsolutePath().toString();
+
     @BeforeMethod
     public void setUp()
     {
@@ -28,21 +32,29 @@ public class TestCase006 {
     }
 
     @Test
-    public void RegisterUserUsingExistingEmail() throws FileNotFoundException {
+    public void ContactUsForm() throws FileNotFoundException {
         //Verifying Visibility of HomePage
         Assert.assertTrue(new HomePage(getDriver()).VerifyHomePageVisibility());
 
-        //Clicking Signup button and Verifying the Visibility of Login Page
-        new HomePage(getDriver()).ClickSignupButton();
-        Assert.assertTrue(new LoginPage(getDriver()).VerifySignupTextVisibility());
+        //Clicking Contact us Button and Verifying Visibility of Get In Touch Text
+        new HomePage(getDriver()).ClickContactusButton();
+        Assert.assertTrue(new ContactUsPage(getDriver()).VerifyGetInTouchTextVisibility());
 
-        //Entering Already Existing Email and clicking Signup Button
-        new LoginPage(getDriver()).SetSignupEmail(DataUtils.getJsonData("ValidLogin","Email"))
-                .SetSignupName(DataUtils.getJsonData("ValidLogin","Name"))
-                .ClickSignupButton();
+        //Entering Data, Clicking Submit Button and Accepting the Alert
+        new ContactUsPage(getDriver()).SetName(DataUtils.getJsonData("ValidLogin","Name"))
+                .SetEmail(DataUtils.getJsonData("ValidLogin","Email"))
+                .SetSubject("Test Subject")
+                .SetMessage("Test Message")
+                .UploadAttachment(filePath)
+                .ClickSubmitButton()
+                .AcceptAlert();
 
-        //Verifying Visibility of Email Already Exists Message
-        Assert.assertTrue(new LoginPage(getDriver()).VerifyEmailAlreadyExistsVisibility());
+        //Verifying Visibility of Success Message
+        Assert.assertTrue(new ContactUsPage(getDriver()).VerifySuccessMsgVisibility());
+
+        //Clicking Home button and verifying Redirection to HomePage
+        new ContactUsPage(getDriver()).ClickHomeButton();
+        Assert.assertEquals(getDriver().getCurrentUrl(),"https://www.automationexercise.com/");
     }
 
     @AfterMethod

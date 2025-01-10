@@ -1,0 +1,8 @@
+[INFO] 23-12-2024 03:09:21 [main] [Tests.TestCase001.setUp(TestCase001.java:34)] - Page is redirected to URL
+[INFO] 23-12-2024 03:09:21 [main] [Listeners.ITestResultListenerClass.onTestStart(ITestResultListenerClass.java:11)] - Test Case RegisterUser Started
+[INFO] 23-12-2024 03:09:22 [main] [Tests.TestCase001.RegisterUser(TestCase001.java:48)] - Username For this Test Case is User2024-12-23-3-9-06AM
+[INFO] 23-12-2024 03:09:22 [main] [Tests.TestCase001.RegisterUser(TestCase001.java:49)] - Username For this Test Case is Email@gmail.com2024-12-23-3-9-06AM
+[INFO] 23-12-2024 03:09:26 [main] [Tests.TestCase001.RegisterUser(TestCase001.java:76)] - Full name For this Test Case is Adaline Hayes
+[INFO] 23-12-2024 03:09:26 [main] [Tests.TestCase001.RegisterUser(TestCase001.java:77)] - ZipCode For this Test Case is 20812
+[INFO] 23-12-2024 03:09:26 [main] [Tests.TestCase001.RegisterUser(TestCase001.java:78)] - Mobile Number For this Test Case is 78450230228
+[INFO] 23-12-2024 03:09:34 [main] [Listeners.ITestResultListenerClass.onTestSuccess(ITestResultListenerClass.java:16)] - Test Case RegisterUser Passed

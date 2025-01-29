@@ -12,6 +12,7 @@ public class DeleteAccountPage {
     private final By AccountDeletedText = By.xpath("//b[text()='Account Deleted!']");
     private final By ContinueButton = By.xpath("//a[@data-qa='continue-button']");
 
+    //Actions
     public boolean VerifyAccountDeletedTextVisibility()
     {
         return Util.checkVisibilityofElement(driver, AccountDeletedText);

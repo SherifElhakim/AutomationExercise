@@ -7,9 +7,8 @@ import org.openqa.selenium.WebDriver;
 public class HomePage  {
 
     private final WebDriver driver;
-    public HomePage(WebDriver driver) {
-        super();
-        this.driver = driver;}
+    public HomePage(WebDriver driver)
+    {this.driver = driver;}
 
     //Locators
     private final By HomePageImgCarousel = By.xpath("//div[@class='item active']//img[@alt='demo website for practice']");
@@ -18,6 +17,8 @@ public class HomePage  {
     private final By DeleteAccountButton = By.className("fa-trash-o");
     private final By logoutButton = By.xpath("//a[@href='/logout']");
     private final By ContactUsButton = By.ByClassName.className("fa-envelope");
+    private final By TestCasesButton = By.xpath("//a[text()=' Test Cases']");
+    private final By ProductsButton = By.className("card_travel");
 
     //Actions
     public boolean VerifyHomePageVisibility()
@@ -57,6 +58,18 @@ public class HomePage  {
     {
         Util.ClickElement(driver, ContactUsButton);
         return new ContactUsPage(driver);
+    }
+
+    public HomePage ClickTestCasesButton()
+    {
+        Util.ClickElement(driver, TestCasesButton);
+        return this;
+    }
+
+    public ProductsPage ClickProductsButton()
+    {
+        Util.ClickElement(driver, ProductsButton);
+        return new ProductsPage(driver);
     }
 
 }

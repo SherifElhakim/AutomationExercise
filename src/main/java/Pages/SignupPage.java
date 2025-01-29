@@ -38,6 +38,7 @@ public class SignupPage {
     private final By CreateAccountButtonLocator = By.xpath("//button[@data-qa='create-account']");
     private final By EmailExistsMsg = By.xpath("//p[text()='Email Address already exist!']");
 
+    //Actions
     public boolean CheckEnterAccInfoVisibility()
     {
         return Util.checkVisibilityofElement(driver, EnterAccInfo);

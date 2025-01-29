@@ -20,6 +20,7 @@ public class LoginPage {
     private final By ValidationMsg = By.xpath("//p[text()='Your email or password is incorrect!']");
     private final By EmailExistsMsg = By.xpath("//p[text()='Email Address already exist!']");
 
+    //Actions
     public boolean VerifySignupTextVisibility()
     {
         return Util.checkVisibilityofElement(driver, SignupText);

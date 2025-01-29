@@ -12,6 +12,7 @@ public class AccountCreatedPage {
     private final By AccountCratedText = By.xpath("//b[text()='Account Created!']");
     private final By ContinueButton = By.xpath("//a[@data-qa='continue-button']");
 
+    //Actions
     public boolean VerifyAccountCreatedTextVisibility()
     {
         return Util.checkVisibilityofElement(driver, AccountCratedText);

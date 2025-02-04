@@ -14,13 +14,15 @@ import Listeners.ITestResultListenerClass;
 import Listeners.IinvokedListenerClass;
 
 import java.io.FileNotFoundException;
-import java.nio.file.Paths;
 import java.time.Duration;
 
 import static DriverFactory.DriverFactory.getDriver;
 
 @Listeners({IinvokedListenerClass.class, ITestResultListenerClass.class})
-public class TestCase007 {
+public class TestCase010 {
+
+    private final String SubscriptionEmail = "Email@Subscription.com" + Util.getTimeStamp();
+
     @BeforeMethod
     public void setUp()
     {
@@ -30,18 +32,21 @@ public class TestCase007 {
     }
 
     @Test
-    public void ContactUsForm() throws FileNotFoundException {
+    public void Subscribe() throws FileNotFoundException
+    {
         //Verifying Visibility of HomePage
         Assert.assertTrue(new HomePage(getDriver()).VerifyHomePageVisibility());
 
-        //Clicking Test Cases Button and Verifying Redirection to the Page
-        new HomePage(getDriver()).ClickTestCasesButton();
-        Assert.assertTrue(Util.VerifyRedirectToPage(getDriver(), "https://www.automationexercise.com/test_cases"));
+        //Scrolling Down to Footer And Verifying The Visibility of Subscription
+        new HomePage(getDriver()).ScrollDownToFooter();
+        Assert.assertTrue(new HomePage(getDriver()).VerifySUBSCRIPTIONTest());
+
+        //Entering Email and Verifying Subscription Alert
+        new HomePage(getDriver()).EnterSubscriptionEmail(SubscriptionEmail)
+                .ClickSubscriptionButton();
+        Assert.assertTrue(new HomePage(getDriver()).VerifyVisibilityOfSubscriptionAlert());
     }
 
     @AfterMethod
-    public void quit()
-    {
-        getDriver().quit();
-    }
+    public void quit(){getDriver().quit();}
 }

@@ -1,0 +1,2 @@
+[INFO] 05-02-2025 00:24:26 [main] [Listeners.ITestResultListenerClass.onTestStart(ITestResultListenerClass.java:11)] - Test Case VerifyProductDetails Started
+[INFO] 05-02-2025 00:24:28 [main] [Listeners.IinvokedListenerClass.afterInvocation(IinvokedListenerClass.java:20)] - Test Case VerifyProductDetails failed

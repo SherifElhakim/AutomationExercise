@@ -1,0 +1,57 @@
+package Tests;
+
+import DriverFactory.DriverFactory;
+import Pages.*;
+import Utilities.DataUtils;
+import Utilities.LogsUtils;
+import Utilities.Util;
+import org.testng.Assert;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Listeners;
+import org.testng.annotations.Test;
+import Listeners.ITestResultListenerClass;
+import Listeners.IinvokedListenerClass;
+
+import java.io.FileNotFoundException;
+import java.time.Duration;
+
+import static DriverFactory.DriverFactory.getDriver;
+
+@Listeners({IinvokedListenerClass.class, ITestResultListenerClass.class})
+public class TestCase008 {
+    @BeforeMethod
+    public void setUp()
+    {
+        DriverFactory.setupDriver("chrome");
+        DriverFactory.getDriver().manage().window().maximize();
+        DriverFactory.getDriver().get("https://www.automationexercise.com/");
+    }
+
+    @Test
+    public void VerifyProductDetails() throws FileNotFoundException {
+        //Verifying Visibility of HomePage
+        Assert.assertTrue(new HomePage(getDriver()).VerifyHomePageVisibility());
+
+        //Clicking Products Button and Verifying Redirection to the Page
+        new HomePage(getDriver()).ClickProductsButton();
+        Assert.assertTrue(Util.VerifyRedirectToPage(getDriver(), "https://www.automationexercise.com/products"));
+
+        //Clicking on a Specific Product to Be Redirected to Product Details Page
+        new ProductsPage(getDriver()).ClickOnSpecificProduct(30);
+
+        //Verify Visibility of Product Details
+        Assert.assertTrue(new ProductDetailsPage(getDriver()).VerifyVisibilityOfProductName());
+        Assert.assertTrue(new ProductDetailsPage(getDriver()).VerifyVisibilityOfProductCategory());
+        Assert.assertTrue(new ProductDetailsPage(getDriver()).VerifyVisibilityOfProductPrice());
+        Assert.assertTrue(new ProductDetailsPage(getDriver()).VerifyVisibilityOfProductCondition());
+        Assert.assertTrue(new ProductDetailsPage(getDriver()).VerifyVisibilityOfProductBrand());
+        Assert.assertTrue(new ProductDetailsPage(getDriver()).VerifyVisibilityOfProductAvailability());
+    }
+
+    @AfterMethod
+    public void quit()
+    {
+        //getDriver().quit();
+    }
+}

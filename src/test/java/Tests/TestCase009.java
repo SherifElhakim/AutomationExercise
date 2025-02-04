@@ -14,13 +14,12 @@ import Listeners.ITestResultListenerClass;
 import Listeners.IinvokedListenerClass;
 
 import java.io.FileNotFoundException;
-import java.nio.file.Paths;
 import java.time.Duration;
 
 import static DriverFactory.DriverFactory.getDriver;
 
 @Listeners({IinvokedListenerClass.class, ITestResultListenerClass.class})
-public class TestCase007 {
+public class TestCase009 {
     @BeforeMethod
     public void setUp()
     {
@@ -30,18 +29,26 @@ public class TestCase007 {
     }
 
     @Test
-    public void ContactUsForm() throws FileNotFoundException {
-        //Verifying Visibility of HomePage
+    public void SearchProduct() throws FileNotFoundException
+    {
+    //Verifying Visibility of HomePage
         Assert.assertTrue(new HomePage(getDriver()).VerifyHomePageVisibility());
 
-        //Clicking Test Cases Button and Verifying Redirection to the Page
-        new HomePage(getDriver()).ClickTestCasesButton();
-        Assert.assertTrue(Util.VerifyRedirectToPage(getDriver(), "https://www.automationexercise.com/test_cases"));
+    //Clicking Products Button and Verifying Redirection to the Page
+        new HomePage(getDriver()).ClickProductsButton();
+        Assert.assertTrue(Util.VerifyRedirectToPage(getDriver(), "https://www.automationexercise.com/products"));
+
+    //Searching For a Product  and Verifying Searched Products Title
+       boolean IsRelevant = new ProductsPage(DriverFactory.getDriver()).SearchForProduct("blue top")
+                .ClickSearchButton()
+                .GetProductsNamesOfSearchResults()
+               .VerifyRelevantSearchResults("Top");
+        Assert.assertTrue(new ProductsPage(getDriver()).VerifyVisibilityOfSearchedItems());
+
+    //Verify Relatable Search Items
+        Assert.assertTrue(IsRelevant);
     }
 
-    @AfterMethod
-    public void quit()
-    {
-        getDriver().quit();
-    }
+@AfterMethod
+public void quit(){getDriver().quit();}
 }

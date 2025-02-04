@@ -19,6 +19,11 @@ public class HomePage  {
     private final By ContactUsButton = By.ByClassName.className("fa-envelope");
     private final By TestCasesButton = By.xpath("//a[text()=' Test Cases']");
     private final By ProductsButton = By.className("card_travel");
+    private final By Footer = By.className("col-sm-offset-1");
+    private final By SUBSCRIPTION = By.xpath("//h2[text()='Subscription']");
+    private final By SubscriptionEmailField = By.id("susbscribe_email");
+    private final By SubscribeButton = By.id("subscribe");
+    private final By SubscribedSuccessfullyAlert = By.className("alert-success");
 
     //Actions
     public boolean VerifyHomePageVisibility()
@@ -72,4 +77,31 @@ public class HomePage  {
         return new ProductsPage(driver);
     }
 
+    public HomePage ScrollDownToFooter()
+    {
+        Util.moveToElement(driver, Footer);
+        return this;
+    }
+
+    public Boolean VerifySUBSCRIPTIONTest()
+    {
+       return Util.checkVisibilityofElement(driver, SUBSCRIPTION);
+    }
+
+    public HomePage EnterSubscriptionEmail(String email)
+    {
+        Util.SetData(driver, SubscriptionEmailField, email);
+        return this;
+    }
+
+    public HomePage ClickSubscriptionButton()
+    {
+        Util.ClickElement(driver,SubscribeButton);
+        return this;
+    }
+
+    public Boolean VerifyVisibilityOfSubscriptionAlert()
+    {
+        return Util.checkVisibilityofElement(driver, SubscribedSuccessfullyAlert);
+    }
 }

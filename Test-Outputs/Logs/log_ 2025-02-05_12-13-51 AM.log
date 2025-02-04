@@ -1,0 +1,2 @@
+[INFO] 05-02-2025 00:13:51 [main] [Listeners.ITestResultListenerClass.onTestStart(ITestResultListenerClass.java:11)] - Test Case SearchProduct Started
+[INFO] 05-02-2025 00:13:56 [main] [Listeners.ITestResultListenerClass.onTestSuccess(ITestResultListenerClass.java:16)] - Test Case SearchProduct Passed

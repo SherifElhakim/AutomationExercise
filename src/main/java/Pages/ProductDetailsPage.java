@@ -16,6 +16,7 @@ public class ProductDetailsPage {
     private final By productAvailability = By.xpath("//div[@class='product-information']//p[2]");
     private final By productCondition = By.xpath("//div[@class='product-information']//p[3]");
     private final By productBrand = By.xpath("//div[@class='product-information']//p[4]");
+    private final By QuantityTextField = By.id("quantity");
 
     //Actions
     public boolean VerifyVisibilityOfProductName()
@@ -46,6 +47,12 @@ public class ProductDetailsPage {
     public boolean VerifyVisibilityOfProductBrand()
     {
        return Util.checkVisibilityofElement(driver, productBrand);
+    }
+
+    public ProductDetailsPage EnterQuantity(String quantity)
+    {
+        Util.SetData(driver, QuantityTextField, quantity);
+        return this;
     }
 
 }

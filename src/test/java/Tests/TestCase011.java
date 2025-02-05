@@ -36,12 +36,12 @@ public class TestCase011 {
 
         //Scrolling Down to Footer And Verifying The Visibility of Subscription
         new CartPage(getDriver()).ScrollDownToFooter();
-        Assert.assertTrue(new HomePage(getDriver()).VerifySUBSCRIPTIONTest());
+        Assert.assertTrue(new CartPage(getDriver()).VerifySUBSCRIPTIONTest());
 
         //Entering Email and Verifying Subscription Alert
         new CartPage(getDriver()).EnterSubscriptionEmail(SubscriptionEmailCartPage)
                 .ClickSubscriptionButton();
-        Assert.assertTrue(new HomePage(getDriver()).VerifyVisibilityOfSubscriptionAlert());
+        Assert.assertTrue(new CartPage(getDriver()).VerifyVisibilityOfSubscriptionAlert());
     }
 
     @AfterMethod

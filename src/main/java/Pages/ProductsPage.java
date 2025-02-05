@@ -22,11 +22,16 @@ public class ProductsPage {
     private By SpecificProduct(int productIndex){
         return By.xpath("(//a[text()='View Product'])["+productIndex+"]");
     }
+    private By SpecificProductAddToCart(int productIndex) {
+        return By.xpath("(//a[text()='Add to cart'])["+productIndex+"]");
+    }
     private By SearchBar = By.className("input-lg");
     private By SearchButton = By.id("submit_search");
     private By SearchedProductsTitle = By.xpath("//h2[text()='Searched Products']");
     private final By AllProducts = By.cssSelector("div[class*='productinfo']");
     private final By AllProductsName = By.cssSelector("div[class*='productinfo'] > p");
+    private final By ContinueShoppingButton = By.className("btn-block");
+    private final By ViewCartButton = By.xpath("//u[text()='View Cart']");
 
 
     //Actions
@@ -37,10 +42,29 @@ public class ProductsPage {
         return new ProductDetailsPage(driver);
     }
 
+    public ProductsPage AddSpecificProductToCart(int Index)
+    {
+        Util.moveToElement(driver,SpecificProductAddToCart(Index));
+        Util.ClickElement(driver, SpecificProductAddToCart(Index));
+        return new ProductsPage(driver);
+    }
+
     public ProductsPage SearchForProduct(String ProductName)
     {
         Util.SetData(driver, SearchBar, ProductName);
         return this;
+    }
+
+    public ProductsPage ClickContinueShoppingButton()
+    {
+        Util.ClickElement(driver, ContinueShoppingButton);
+        return this;
+    }
+
+    public CartPage ClickViewCartButton()
+    {
+        Util.ClickElement(driver, ViewCartButton);
+        return new CartPage(driver);
     }
 
     public ProductsPage ClickSearchButton()

@@ -24,6 +24,7 @@ public class HomePage  {
     private final By SubscriptionEmailField = By.id("susbscribe_email");
     private final By SubscribeButton = By.id("subscribe");
     private final By SubscribedSuccessfullyAlert = By.className("alert-success");
+    private final By CartButton = By.xpath("//a[text()=' Cart']");
 
     //Actions
     public boolean VerifyHomePageVisibility()
@@ -103,5 +104,11 @@ public class HomePage  {
     public Boolean VerifyVisibilityOfSubscriptionAlert()
     {
         return Util.checkVisibilityofElement(driver, SubscribedSuccessfullyAlert);
+    }
+
+    public CartPage ClickCartButton()
+    {
+        Util.ClickElement(driver,CartButton);
+        return new CartPage(driver);
     }
 }

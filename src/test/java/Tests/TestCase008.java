@@ -50,8 +50,5 @@ public class TestCase008 {
     }
 
     @AfterMethod
-    public void quit()
-    {
-        //getDriver().quit();
-    }
+    public void quit() {getDriver().quit();}
 }

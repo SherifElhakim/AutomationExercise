@@ -36,7 +36,7 @@ public class TestCase011 {
 
         //Scrolling Down to Footer And Verifying The Visibility of Subscription
         new CartPage(getDriver()).ScrollDownToFooter();
-        Assert.assertTrue(new CartPage(getDriver()).VerifySUBSCRIPTIONTest());
+        Assert.assertTrue(new CartPage(getDriver()).VerifySUBSCRIPTION());
 
         //Entering Email and Verifying Subscription Alert
         new CartPage(getDriver()).EnterSubscriptionEmail(SubscriptionEmailCartPage)

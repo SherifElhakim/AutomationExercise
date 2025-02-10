@@ -19,6 +19,8 @@ public class CartPage {
     private final By SubscriptionEmailField = By.id("susbscribe_email");
     private final By SubscribeButton = By.id("subscribe");
     private final By SubscribedSuccessfullyAlert = By.className("alert-success");
+    private final By ProceedToCheckoutButton = By.xpath("//a[text()='Proceed To Checkout']");
+    private final By RegisterLoginAfterCheckout = By.xpath("//u[text()='Register / Login']");
     private By SpecificProductDescription(String Index) {
         return By.xpath("//a[contains(@href, '/product_details/" + Index + "')]");
     }
@@ -39,7 +41,7 @@ public class CartPage {
         return this;
     }
 
-    public Boolean VerifySUBSCRIPTIONTest()
+    public Boolean VerifySUBSCRIPTION()
     {
         return Util.checkVisibilityofElement(driver, SUBSCRIPTION);
     }
@@ -80,5 +82,22 @@ public class CartPage {
     public boolean VerifyTotalPricesAreSimilar(String JsonFile,int i) throws FileNotFoundException
     {
         return Util.getText(driver,GetTotalPrice(i)).equals(DataUtils.getJsonData(JsonFile,"Total"));
+    }
+
+    public boolean VerifyProductQuantity(int i,String Quantity) throws FileNotFoundException
+    {
+        return Util.getText(driver,GetCartQuantityButtonByIndex(i)).equals(Quantity);
+    }
+
+    public CheckoutPage ClickProceedToCheckoutButton()
+    {
+        Util.ClickElement(driver,ProceedToCheckoutButton);
+        return new CheckoutPage(driver);
+    }
+
+    public LoginPage ClickRegisterLoginAfterCheckout()
+    {
+        Util.ClickElement(driver,RegisterLoginAfterCheckout);
+        return new LoginPage(driver);
     }
 }

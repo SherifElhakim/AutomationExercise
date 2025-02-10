@@ -17,6 +17,8 @@ public class ProductDetailsPage {
     private final By productCondition = By.xpath("//div[@class='product-information']//p[3]");
     private final By productBrand = By.xpath("//div[@class='product-information']//p[4]");
     private final By QuantityTextField = By.id("quantity");
+    private final By AddToCartButton = By.xpath("//button[@class='btn btn-default cart']");
+    private final By ViewCartButton = By.xpath("//u[text()='View Cart']");
 
     //Actions
     public boolean VerifyVisibilityOfProductName()
@@ -51,8 +53,21 @@ public class ProductDetailsPage {
 
     public ProductDetailsPage EnterQuantity(String quantity)
     {
+        Util.clearText(driver, QuantityTextField);
         Util.SetData(driver, QuantityTextField, quantity);
         return this;
+    }
+
+    public ProductDetailsPage ClickAddToCart()
+    {
+        Util.ClickElement(driver, AddToCartButton);
+        return this;
+    }
+
+    public CartPage ClickViewCartButton()
+    {
+        Util.ClickElement(driver, ViewCartButton);
+        return new CartPage(driver);
     }
 
 }

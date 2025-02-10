@@ -25,6 +25,10 @@ public class HomePage  {
     private final By SubscribeButton = By.id("subscribe");
     private final By SubscribedSuccessfullyAlert = By.className("alert-success");
     private final By CartButton = By.xpath("//a[text()=' Cart']");
+    private By SpecificProductAddToCart(int productIndex) {
+        return By.xpath("(//a[text()='Add to cart'])["+productIndex+"]");
+    }
+    private final By ViewCartButton = By.xpath("//u[text()='View Cart']");
 
     //Actions
     public boolean VerifyHomePageVisibility()
@@ -108,7 +112,22 @@ public class HomePage  {
 
     public CartPage ClickCartButton()
     {
+        Util.moveToElement(driver,CartButton);
         Util.ClickElement(driver,CartButton);
         return new CartPage(driver);
     }
+
+    public HomePage AddSpecificProductToCart(int Index)
+    {
+        Util.moveToElement(driver,SpecificProductAddToCart(Index));
+        Util.ClickElement(driver, SpecificProductAddToCart(Index));
+        return this;
+    }
+
+    public CartPage ClickViewCartButton()
+    {
+        Util.ClickElement(driver, ViewCartButton);
+        return new CartPage(driver);
+    }
+
 }

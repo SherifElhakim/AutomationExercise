@@ -36,6 +36,8 @@ public class ProductsPage {
     private final By PoloBrand = By.xpath("//a[text()='Polo']");
     private final By HMBrand = By.xpath("//a[text()='H&M']");
     private final By CenterTitleText = By.cssSelector(".title.text-center");
+    private final By SignupLoginButton = By.xpath("//a[@href='/login']");
+
 
     //Actions
     public ProductDetailsPage ClickOnSpecificProduct(int Index)
@@ -121,7 +123,7 @@ public class ProductsPage {
 
     public String GetCenterTitleText()
     {
-        System.out.println(Util.getText(driver, CenterTitleText));
         return Util.getText(driver, CenterTitleText);
     }
+
 }

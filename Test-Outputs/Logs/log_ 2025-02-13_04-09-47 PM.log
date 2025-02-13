@@ -1,0 +1,2 @@
+[INFO] 13-02-2025 16:09:47 [main] [Listeners.ITestResultListenerClass.onTestStart(ITestResultListenerClass.java:11)] - Test Case SearchAndVerifyLogin Started
+[INFO] 13-02-2025 16:10:00 [main] [Listeners.IinvokedListenerClass.afterInvocation(IinvokedListenerClass.java:20)] - Test Case SearchAndVerifyLogin failed

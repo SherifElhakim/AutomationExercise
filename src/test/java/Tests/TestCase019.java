@@ -46,7 +46,7 @@ public class TestCase019 {
         //Clicking On a Different Brand and Verifying Redirection to the Correct Page
         new ProductsPage(getDriver()).ClickHMBrand();
         Assert.assertTrue(Util.VerifyRedirectToPage(getDriver(), "https://www.automationexercise.com/brand_products/H&M"));
-        Assert.assertEquals(new ProductsPage(getDriver()).GetCenterTitleText(), "H&M PRODUCTS");
+        Assert.assertEquals(new ProductsPage(getDriver()).GetCenterTitleText(), "BRAND - H&M PRODUCTS");
 
     }
     @AfterMethod

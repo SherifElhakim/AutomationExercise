@@ -33,8 +33,8 @@ public class Util {
 
     public static void ClickElement(WebDriver driver, By locator)
     {
-    new WebDriverWait(driver, Duration.ofSeconds(5)).until(ExpectedConditions.elementToBeClickable(locator));
-    driver.findElement(locator).click();
+        new WebDriverWait(driver, Duration.ofSeconds(5)).until(ExpectedConditions.elementToBeClickable(locator));
+        driver.findElement(locator).click();
     }
 
     public static void clearText(WebDriver driver , By locator){

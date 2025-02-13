@@ -25,6 +25,13 @@ public class HomePage  {
     private final By SubscribeButton = By.id("subscribe");
     private final By SubscribedSuccessfullyAlert = By.className("alert-success");
     private final By CartButton = By.xpath("//a[text()=' Cart']");
+    private final By Categories = By.id("accordian");
+    private final By WomenCategory = By.xpath("//a[@data-toggle='collapse' and contains(., 'Women')]");
+    private final By DressSubCategory = By.xpath("//a[@href='/category_products/1' and text()='Dress ']");
+    private final By TShirtsSubCategory = By.xpath("//a[@href='/category_products/3' and text()='Tshirts ']");
+    private final By MenCategory = By.xpath("//a[@data-toggle='collapse' and contains(., 'Men')]");
+    private final By WomenDressProductsTitle = By.xpath("//h2[text()='Women - Dress Products']");
+    private final By MenTShirtsProductsTitle = By.xpath("//h2[text()='Men - Tshirts Products']");
     private By SpecificProductAddToCart(int productIndex) {
         return By.xpath("(//a[text()='Add to cart'])["+productIndex+"]");
     }
@@ -130,4 +137,42 @@ public class HomePage  {
         return new CartPage(driver);
     }
 
+    public boolean VerifyCategoriesVisibility()
+    {
+        return Util.checkVisibilityofElement(driver, Categories);
+    }
+
+    public HomePage ClickWomenCategory ()
+    {
+        Util.ClickElement(driver, WomenCategory);
+        return this;
+    }
+
+    public HomePage ClickMenCategory ()
+    {
+        Util.ClickElement(driver, MenCategory);
+        return this;
+    }
+
+    public HomePage ClickDressSubCategory ()
+    {
+        Util.ClickElement(driver, DressSubCategory);
+        return this;
+    }
+
+    public HomePage ClickTShirtsSubCategory ()
+    {
+        Util.ClickElement(driver, TShirtsSubCategory);
+        return this;
+    }
+
+    public boolean VerifyWomenDressTitleVisibility ()
+    {
+        return Util.checkVisibilityofElement(driver, WomenDressProductsTitle);
+    }
+
+    public boolean VerifyMenTShirtsTitleVisibility ()
+    {
+        return Util.checkVisibilityofElement(driver, MenTShirtsProductsTitle);
+    }
 }

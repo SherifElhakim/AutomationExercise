@@ -1,0 +1,2 @@
+[INFO] 11-02-2025 03:07:13 [main] [Listeners.ITestResultListenerClass.onTestStart(ITestResultListenerClass.java:11)] - Test Case AddProductsToCart Started
+[INFO] 11-02-2025 03:07:18 [main] [Listeners.ITestResultListenerClass.onTestSuccess(ITestResultListenerClass.java:16)] - Test Case AddProductsToCart Passed

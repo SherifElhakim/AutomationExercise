@@ -32,7 +32,10 @@ public class ProductsPage {
     private final By AllProductsName = By.cssSelector("div[class*='productinfo'] > p");
     private final By ContinueShoppingButton = By.className("btn-block");
     private final By ViewCartButton = By.xpath("//u[text()='View Cart']");
-
+    private final By Brands = By.className("brands_products");
+    private final By PoloBrand = By.xpath("//a[text()='Polo']");
+    private final By HMBrand = By.xpath("//a[text()='H&M']");
+    private final By CenterTitleText = By.cssSelector(".title.text-center");
 
     //Actions
     public ProductDetailsPage ClickOnSpecificProduct(int Index)
@@ -97,5 +100,28 @@ public class ProductsPage {
                 return false ;
         }
         return true ;
+    }
+
+    public boolean VerifyBrandsVisibility()
+    {
+        return Util.checkVisibilityofElement(driver, Brands);
+    }
+
+    public ProductsPage ClickPoloBrand()
+    {
+        Util.ClickElement(driver, PoloBrand);
+        return this;
+    }
+
+    public ProductsPage ClickHMBrand()
+    {
+        Util.ClickElement(driver, HMBrand);
+        return this;
+    }
+
+    public String GetCenterTitleText()
+    {
+        System.out.println(Util.getText(driver, CenterTitleText));
+        return Util.getText(driver, CenterTitleText);
     }
 }

@@ -21,6 +21,7 @@ public class CartPage {
     private final By SubscribedSuccessfullyAlert = By.className("alert-success");
     private final By ProceedToCheckoutButton = By.xpath("//a[text()='Proceed To Checkout']");
     private final By RegisterLoginAfterCheckout = By.xpath("//u[text()='Register / Login']");
+    private final By CartIsEmptyText = By.xpath("//b[text()='Cart is empty!']");
     private By SpecificProductDescription(String Index) {
         return By.xpath("//a[contains(@href, '/product_details/" + Index + "')]");
     }
@@ -32,6 +33,9 @@ public class CartPage {
     }
     private By GetTotalPrice(int index) {
         return By.xpath("(//td[@class='cart_total'])[" + index + "]");
+    }
+    private By RemoveProductButtonByIndex(int index) {
+        return By.xpath("(//a[@class='cart_quantity_delete'])[" + index + "]");
     }
 
     //Actions
@@ -99,5 +103,21 @@ public class CartPage {
     {
         Util.ClickElement(driver,RegisterLoginAfterCheckout);
         return new LoginPage(driver);
+    }
+
+    public boolean VerifyEmptyCartTextVisibility ()
+    {
+        return Util.checkVisibilityofElement(driver, CartIsEmptyText);
+    }
+
+    public String ReturnProductDescription(String index)
+    {
+        return Util.getText(driver,SpecificProductDescription(index));
+    }
+
+    public CartPage ClickRemoveButton(int index)
+    {
+        Util.ClickElement(driver,RemoveProductButtonByIndex(index));
+        return this;
     }
 }

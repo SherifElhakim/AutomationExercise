@@ -29,7 +29,7 @@ public class TestCase018 {
     }
 
     @Test
-    public void AddProductsToCart() throws FileNotFoundException {
+    public void ViewCategoriesProducts() throws FileNotFoundException {
         //Verifying Visibility of HomePage and the Categories Side Panel
         Assert.assertTrue(new HomePage(getDriver()).VerifyHomePageVisibility());
         Assert.assertTrue(new HomePage(getDriver()).VerifyCategoriesVisibility());

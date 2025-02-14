@@ -32,6 +32,10 @@ public class HomePage  {
     private final By MenCategory = By.xpath("//a[@data-toggle='collapse' and contains(., 'Men')]");
     private final By WomenDressProductsTitle = By.xpath("//h2[text()='Women - Dress Products']");
     private final By MenTShirtsProductsTitle = By.xpath("//h2[text()='Men - Tshirts Products']");
+    private final By RecommendedItemsText = By.xpath("//h2[text()='recommended items']");
+    private By SpecificRecommendedProductAddToCart(int productIndex) {
+        return By.xpath("(//div[@class='recommended_items']//a[contains(@class, 'add-to-cart')])["+productIndex+"]");
+    }
     private By SpecificProductAddToCart(int productIndex) {
         return By.xpath("(//a[text()='Add to cart'])["+productIndex+"]");
     }
@@ -174,5 +178,18 @@ public class HomePage  {
     public boolean VerifyMenTShirtsTitleVisibility ()
     {
         return Util.checkVisibilityofElement(driver, MenTShirtsProductsTitle);
+    }
+
+    public boolean VerifyRecommendedProductsVisibility()
+    {
+        Util.moveToElement(driver,RecommendedItemsText);
+       return Util.checkVisibilityofElement(driver,RecommendedItemsText);
+    }
+
+    public HomePage AddRecommendedItemToCart(int Index)
+    {
+        Util.moveToElement(driver,SpecificRecommendedProductAddToCart(Index));
+        Util.ClickElement(driver, SpecificRecommendedProductAddToCart(Index));
+        return this;
     }
 }

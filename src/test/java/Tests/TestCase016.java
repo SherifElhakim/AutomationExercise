@@ -32,7 +32,7 @@ public class TestCase016 {
     }
 
     @Test
-    public void LoginUsingExistingAccount() throws FileNotFoundException {
+    public void LoginBeforeCheckout() throws FileNotFoundException {
         //Verifying Visibility of HomePage
         Assert.assertTrue(new HomePage(getDriver()).VerifyHomePageVisibility());
 

@@ -36,7 +36,6 @@ public class ProductsPage {
     private final By PoloBrand = By.xpath("//a[text()='Polo']");
     private final By HMBrand = By.xpath("//a[text()='H&M']");
     private final By CenterTitleText = By.cssSelector(".title.text-center");
-    private final By SignupLoginButton = By.xpath("//a[@href='/login']");
 
 
     //Actions

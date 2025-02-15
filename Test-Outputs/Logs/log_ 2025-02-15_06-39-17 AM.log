@@ -1,0 +1,9 @@
+[INFO] 15-02-2025 06:39:17 [main] [Listeners.ITestResultListenerClass.onTestStart(ITestResultListenerClass.java:11)] - Test Case RegisterUser_ThenDelete Started
+[INFO] 15-02-2025 06:39:17 [main] [Tests.TestCase023.RegisterUser_ThenDelete(TestCase023.java:50)] - Username For this Test Case is User2025-02-15-6-39-11AM
+[INFO] 15-02-2025 06:39:17 [main] [Tests.TestCase023.RegisterUser_ThenDelete(TestCase023.java:51)] - Email For this Test Case is Email@gmail.com2025-02-15-6-39-11AM
+[INFO] 15-02-2025 06:40:40 [main] [Tests.TestCase023.RegisterUser_ThenDelete(TestCase023.java:78)] - Full name For this Test Case is Gilberte Purdy
+[INFO] 15-02-2025 06:40:40 [main] [Tests.TestCase023.RegisterUser_ThenDelete(TestCase023.java:79)] - ZipCode For this Test Case is 16528
+[INFO] 15-02-2025 06:40:40 [main] [Tests.TestCase023.RegisterUser_ThenDelete(TestCase023.java:80)] - Mobile Number For this Test Case is 21638991168
+[INFO] 15-02-2025 06:40:40 [main] [Tests.TestCase023.RegisterUser_ThenDelete(TestCase023.java:81)] - First Address For this Test Case is 94621 Reinger Station
+[INFO] 15-02-2025 06:40:40 [main] [Tests.TestCase023.RegisterUser_ThenDelete(TestCase023.java:82)] - Second Address For this Test Case is 0634 Olson Stream
+[INFO] 15-02-2025 06:40:43 [main] [Listeners.IinvokedListenerClass.afterInvocation(IinvokedListenerClass.java:20)] - Test Case RegisterUser_ThenDelete failed

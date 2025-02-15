@@ -37,6 +37,10 @@ public class CartPage {
     private By RemoveProductButtonByIndex(int index) {
         return By.xpath("(//a[@class='cart_quantity_delete'])[" + index + "]");
     }
+    private By SpecificProductName(int productIndex)
+    {
+        return By.xpath("(//tr[contains(@id, 'product-')]//td[@class='cart_description']//h4/a)["+productIndex+"]");
+    }
 
     //Actions
     public CartPage ScrollDownToFooter()
@@ -119,5 +123,10 @@ public class CartPage {
     {
         Util.ClickElement(driver,RemoveProductButtonByIndex(index));
         return this;
+    }
+
+    public String GetNameOfCartItem (int Index)
+    {
+        return Util.getText(driver,SpecificProductName(Index));
     }
 }

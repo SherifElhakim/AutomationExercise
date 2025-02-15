@@ -39,7 +39,7 @@ public class TestCase010 {
 
         //Scrolling Down to Footer And Verifying The Visibility of Subscription
         new HomePage(getDriver()).ScrollDownToFooter();
-        Assert.assertTrue(new HomePage(getDriver()).VerifySUBSCRIPTIONTest());
+        Assert.assertTrue(new HomePage(getDriver()).VerifySUBSCRIPTIONText());
 
         //Entering Email and Verifying Subscription Alert
         new HomePage(getDriver()).EnterSubscriptionEmail(SubscriptionEmail)
@@ -48,5 +48,6 @@ public class TestCase010 {
     }
 
     @AfterMethod
-    public void quit(){getDriver().quit();}
+    public void quit(){getDriver().quit();
+    }
 }

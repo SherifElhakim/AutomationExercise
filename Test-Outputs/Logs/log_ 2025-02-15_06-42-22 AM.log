@@ -1,0 +1,9 @@
+[INFO] 15-02-2025 06:42:22 [main] [Listeners.ITestResultListenerClass.onTestStart(ITestResultListenerClass.java:11)] - Test Case VerifyAddressesSimilarity Started
+[INFO] 15-02-2025 06:42:23 [main] [Tests.TestCase023.VerifyAddressesSimilarity(TestCase023.java:50)] - Username For this Test Case is User2025-02-15-6-42-17AM
+[INFO] 15-02-2025 06:42:23 [main] [Tests.TestCase023.VerifyAddressesSimilarity(TestCase023.java:51)] - Email For this Test Case is Email@gmail.com2025-02-15-6-42-17AM
+[INFO] 15-02-2025 06:43:47 [main] [Tests.TestCase023.VerifyAddressesSimilarity(TestCase023.java:78)] - Full name For this Test Case is Roman Feest
+[INFO] 15-02-2025 06:43:47 [main] [Tests.TestCase023.VerifyAddressesSimilarity(TestCase023.java:79)] - ZipCode For this Test Case is 68333
+[INFO] 15-02-2025 06:43:47 [main] [Tests.TestCase023.VerifyAddressesSimilarity(TestCase023.java:80)] - Mobile Number For this Test Case is 26579906014
+[INFO] 15-02-2025 06:43:47 [main] [Tests.TestCase023.VerifyAddressesSimilarity(TestCase023.java:81)] - First Address For this Test Case is 53888 Bosco Squares
+[INFO] 15-02-2025 06:43:47 [main] [Tests.TestCase023.VerifyAddressesSimilarity(TestCase023.java:82)] - Second Address For this Test Case is 56509 Agustin Pine
+[INFO] 15-02-2025 06:43:52 [main] [Listeners.IinvokedListenerClass.afterInvocation(IinvokedListenerClass.java:20)] - Test Case VerifyAddressesSimilarity failed

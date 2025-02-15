@@ -12,6 +12,7 @@ public class HomePage  {
 
     //Locators
     private final By HomePageImgCarousel = By.xpath("//div[@class='item active']//img[@alt='demo website for practice']");
+    private final By CarouselText = By.xpath("(//div[@class='item active']//h2)[1]");
     private final By SignupLoginButton = By.xpath("//a[@href='/login']");
     private final By LoggedInAsText = By.className("fa-user");
     private final By DeleteAccountButton = By.className("fa-trash-o");
@@ -33,18 +34,28 @@ public class HomePage  {
     private final By WomenDressProductsTitle = By.xpath("//h2[text()='Women - Dress Products']");
     private final By MenTShirtsProductsTitle = By.xpath("//h2[text()='Men - Tshirts Products']");
     private final By RecommendedItemsText = By.xpath("//h2[text()='recommended items']");
+    private final By ViewCartButton = By.xpath("//u[text()='View Cart']");
+    private final By ScrollUpArrow = By.className("fa-angle-up");
     private By SpecificRecommendedProductAddToCart(int productIndex) {
         return By.xpath("(//div[@class='recommended_items']//a[contains(@class, 'add-to-cart')])["+productIndex+"]");
     }
     private By SpecificProductAddToCart(int productIndex) {
         return By.xpath("(//a[text()='Add to cart'])["+productIndex+"]");
     }
-    private final By ViewCartButton = By.xpath("//u[text()='View Cart']");
+    private By SpecificRecommendedProductName(int productIndex)
+    {
+        return By.xpath("(//div[@class='recommended_items']//div[@class='productinfo text-center']//p)["+productIndex+"]");
+    }
 
     //Actions
     public boolean VerifyHomePageVisibility()
     {
         return Util.checkVisibilityofElement(driver, HomePageImgCarousel);
+    }
+
+    public Boolean VerifyCarouselTextVisibility()
+    {
+        return Util.isElementInViewport(driver,CarouselText);
     }
 
     public boolean VerifyLoggedInText()
@@ -99,7 +110,7 @@ public class HomePage  {
         return this;
     }
 
-    public Boolean VerifySUBSCRIPTIONTest()
+    public Boolean VerifySUBSCRIPTIONText()
     {
        return Util.checkVisibilityofElement(driver, SUBSCRIPTION);
     }
@@ -112,6 +123,7 @@ public class HomePage  {
 
     public HomePage ClickSubscriptionButton()
     {
+        Util.moveToElement(driver,SubscribeButton);
         Util.ClickElement(driver,SubscribeButton);
         return this;
     }
@@ -190,6 +202,29 @@ public class HomePage  {
     {
         Util.moveToElement(driver,SpecificRecommendedProductAddToCart(Index));
         Util.ClickElement(driver, SpecificRecommendedProductAddToCart(Index));
+        return this;
+    }
+
+    public String GetNameOfRecommendedItem (int Index)
+    {
+        return Util.getText(driver,SpecificRecommendedProductName(Index));
+    }
+
+    public HomePage ScrollToBottom()
+    {
+        Util.scrollToBottom(driver);
+        return this;
+    }
+
+    public HomePage ScrollToTop()
+    {
+        Util.scrollToTop(driver);
+        return this;
+    }
+
+    public HomePage ClickScrollUpButton()
+    {
+        Util.ClickElement(driver,ScrollUpArrow);
         return this;
     }
 }

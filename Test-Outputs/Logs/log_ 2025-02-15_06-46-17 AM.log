@@ -1,0 +1,9 @@
+[INFO] 15-02-2025 06:46:17 [main] [Listeners.ITestResultListenerClass.onTestStart(ITestResultListenerClass.java:11)] - Test Case VerifyAddressesSimilarity Started
+[INFO] 15-02-2025 06:46:18 [main] [Tests.TestCase023.VerifyAddressesSimilarity(TestCase023.java:50)] - Username For this Test Case is User2025-02-15-6-46-11AM
+[INFO] 15-02-2025 06:46:18 [main] [Tests.TestCase023.VerifyAddressesSimilarity(TestCase023.java:51)] - Email For this Test Case is Email@gmail.com2025-02-15-6-46-11AM
+[INFO] 15-02-2025 06:47:42 [main] [Tests.TestCase023.VerifyAddressesSimilarity(TestCase023.java:78)] - Full name For this Test Case is Ludie Bailey
+[INFO] 15-02-2025 06:47:42 [main] [Tests.TestCase023.VerifyAddressesSimilarity(TestCase023.java:79)] - ZipCode For this Test Case is 70603
+[INFO] 15-02-2025 06:47:42 [main] [Tests.TestCase023.VerifyAddressesSimilarity(TestCase023.java:80)] - Mobile Number For this Test Case is 95344785861
+[INFO] 15-02-2025 06:47:42 [main] [Tests.TestCase023.VerifyAddressesSimilarity(TestCase023.java:81)] - First Address For this Test Case is 237 Skye Mission
+[INFO] 15-02-2025 06:47:42 [main] [Tests.TestCase023.VerifyAddressesSimilarity(TestCase023.java:82)] - Second Address For this Test Case is 028 Dicki Bridge
+[INFO] 15-02-2025 06:47:55 [main] [Listeners.IinvokedListenerClass.afterInvocation(IinvokedListenerClass.java:20)] - Test Case VerifyAddressesSimilarity failed

@@ -1,0 +1,9 @@
+[INFO] 15-02-2025 07:06:26 [main] [Listeners.ITestResultListenerClass.onTestStart(ITestResultListenerClass.java:11)] - Test Case VerifyAddressesSimilarity Started
+[INFO] 15-02-2025 07:06:27 [main] [Tests.TestCase023.VerifyAddressesSimilarity(TestCase023.java:50)] - Username For this Test Case is User2025-02-15-7-6-21AM
+[INFO] 15-02-2025 07:06:27 [main] [Tests.TestCase023.VerifyAddressesSimilarity(TestCase023.java:51)] - Email For this Test Case is Email@gmail.com2025-02-15-7-6-21AM
+[INFO] 15-02-2025 07:07:51 [main] [Tests.TestCase023.VerifyAddressesSimilarity(TestCase023.java:78)] - Full name For this Test Case is Leon Ziemann
+[INFO] 15-02-2025 07:07:51 [main] [Tests.TestCase023.VerifyAddressesSimilarity(TestCase023.java:79)] - ZipCode For this Test Case is 79860
+[INFO] 15-02-2025 07:07:51 [main] [Tests.TestCase023.VerifyAddressesSimilarity(TestCase023.java:80)] - Mobile Number For this Test Case is 21010357844
+[INFO] 15-02-2025 07:07:51 [main] [Tests.TestCase023.VerifyAddressesSimilarity(TestCase023.java:81)] - First Address For this Test Case is 6625 Skiles Way
+[INFO] 15-02-2025 07:07:51 [main] [Tests.TestCase023.VerifyAddressesSimilarity(TestCase023.java:82)] - Second Address For this Test Case is 73224 Wolff Locks
+[INFO] 15-02-2025 07:08:01 [main] [Listeners.ITestResultListenerClass.onTestSuccess(ITestResultListenerClass.java:16)] - Test Case VerifyAddressesSimilarity Passed

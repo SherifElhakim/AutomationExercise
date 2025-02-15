@@ -58,6 +58,16 @@ public class Util {
         ((JavascriptExecutor)driver).executeScript("arguments[0]._scrollIntoView();",findWebElement(driver, locator));
     }
 
+    public static void scrollToBottom(WebDriver driver) {
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        js.executeScript("window.scrollTo(0, document.body.scrollHeight);");
+    }
+
+    public static void scrollToTop(WebDriver driver) {
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        js.executeScript("window.scrollTo(0, 0);");
+    }
+
     public static WebElement findWebElement(WebDriver driver, By locator)
     {
         return driver.findElement(locator);
@@ -72,6 +82,29 @@ public class Util {
         } catch (Exception e) {
             return false;
         }
+    }
+
+    public static boolean isElementInViewport(WebDriver driver, By locator) {
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+
+        // Wait for the element to be visible
+        WebElement element = wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
+
+        // Scroll into view before checking
+        ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", element);
+
+        // Check if the element is within the viewport
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        return (Boolean) js.executeScript(
+                "var rect = arguments[0].getBoundingClientRect();" +
+                        "return (" +
+                        "rect.top >= 0 && " +
+                        "rect.left >= 0 && " +
+                        "rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) && " +
+                        "rect.right <= (window.innerWidth || document.documentElement.clientWidth)" +
+                        ");",
+                element
+        );
     }
 
     public static void SelectingFromDropDown(WebDriver driver, By locator, String Op)

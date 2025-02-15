@@ -1,0 +1,5 @@
+[INFO] 15-02-2025 07:54:58 [main] [Listeners.ITestResultListenerClass.onTestStart(ITestResultListenerClass.java:11)] - Test Case VerifyProductDetails Started
+[INFO] 15-02-2025 07:55:04 [main] [Listeners.IinvokedListenerClass.afterInvocation(IinvokedListenerClass.java:20)] - Test Case VerifyProductDetails failed
+[INFO] 15-02-2025 07:55:08 [main] [Listeners.ITestResultListenerClass.onTestStart(ITestResultListenerClass.java:11)] - Test Case Subscribe Started
+[INFO] 15-02-2025 07:55:10 [main] [Listeners.IinvokedListenerClass.afterInvocation(IinvokedListenerClass.java:20)] - Test Case Subscribe failed
+[INFO] 15-02-2025 07:55:12 [main] [Listeners.ITestResultListenerClass.onTestStart(ITestResultListenerClass.java:11)] - Test Case AddProductsToCart Started

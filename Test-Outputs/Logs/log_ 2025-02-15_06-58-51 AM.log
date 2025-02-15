@@ -1,0 +1,9 @@
+[INFO] 15-02-2025 06:58:51 [main] [Listeners.ITestResultListenerClass.onTestStart(ITestResultListenerClass.java:11)] - Test Case VerifyAddressesSimilarity Started
+[INFO] 15-02-2025 06:58:52 [main] [Tests.TestCase023.VerifyAddressesSimilarity(TestCase023.java:50)] - Username For this Test Case is User2025-02-15-6-58-44AM
+[INFO] 15-02-2025 06:58:52 [main] [Tests.TestCase023.VerifyAddressesSimilarity(TestCase023.java:51)] - Email For this Test Case is Email@gmail.com2025-02-15-6-58-44AM
+[INFO] 15-02-2025 07:00:15 [main] [Tests.TestCase023.VerifyAddressesSimilarity(TestCase023.java:78)] - Full name For this Test Case is Kati Koss
+[INFO] 15-02-2025 07:00:15 [main] [Tests.TestCase023.VerifyAddressesSimilarity(TestCase023.java:79)] - ZipCode For this Test Case is 47672
+[INFO] 15-02-2025 07:00:15 [main] [Tests.TestCase023.VerifyAddressesSimilarity(TestCase023.java:80)] - Mobile Number For this Test Case is 40453279668
+[INFO] 15-02-2025 07:00:15 [main] [Tests.TestCase023.VerifyAddressesSimilarity(TestCase023.java:81)] - First Address For this Test Case is 024 Bailey Dam
+[INFO] 15-02-2025 07:00:15 [main] [Tests.TestCase023.VerifyAddressesSimilarity(TestCase023.java:82)] - Second Address For this Test Case is 841 Kulas Crossroad
+[INFO] 15-02-2025 07:00:25 [main] [Listeners.IinvokedListenerClass.afterInvocation(IinvokedListenerClass.java:20)] - Test Case VerifyAddressesSimilarity failed

@@ -1,0 +1,7 @@
+[INFO] 15-02-2025 07:29:13 [main] [Listeners.ITestResultListenerClass.onTestStart(ITestResultListenerClass.java:11)] - Test Case DownloadInvoice Started
+[INFO] 15-02-2025 07:29:16 [main] [Tests.TestCase024.DownloadInvoice(TestCase024.java:58)] - Username For this Test Case is User2025-02-15-7-29-08AM
+[INFO] 15-02-2025 07:29:16 [main] [Tests.TestCase024.DownloadInvoice(TestCase024.java:59)] - Email For this Test Case is Email@gmail.com2025-02-15-7-29-08AM
+[INFO] 15-02-2025 07:29:19 [main] [Tests.TestCase024.DownloadInvoice(TestCase024.java:86)] - Full name For this Test Case is Rachell Gleichner
+[INFO] 15-02-2025 07:29:19 [main] [Tests.TestCase024.DownloadInvoice(TestCase024.java:87)] - ZipCode For this Test Case is 51040
+[INFO] 15-02-2025 07:29:19 [main] [Tests.TestCase024.DownloadInvoice(TestCase024.java:88)] - Mobile Number For this Test Case is 15031003260
+[INFO] 15-02-2025 07:29:33 [main] [Listeners.ITestResultListenerClass.onTestSuccess(ITestResultListenerClass.java:16)] - Test Case DownloadInvoice Passed

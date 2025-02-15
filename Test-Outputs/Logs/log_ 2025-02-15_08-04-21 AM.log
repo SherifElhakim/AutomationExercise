@@ -1,0 +1,11 @@
+[INFO] 15-02-2025 08:04:21 [main] [Listeners.ITestResultListenerClass.onTestStart(ITestResultListenerClass.java:11)] - Test Case SubscribeFromCartPage Started
+[INFO] 15-02-2025 08:04:23 [main] [Listeners.ITestResultListenerClass.onTestSuccess(ITestResultListenerClass.java:16)] - Test Case SubscribeFromCartPage Passed
+[INFO] 15-02-2025 08:04:27 [main] [Listeners.ITestResultListenerClass.onTestStart(ITestResultListenerClass.java:11)] - Test Case AddProductsToCart Started
+[INFO] 15-02-2025 08:04:32 [main] [Listeners.IinvokedListenerClass.afterInvocation(IinvokedListenerClass.java:20)] - Test Case AddProductsToCart failed
+[INFO] 15-02-2025 08:04:36 [main] [Listeners.ITestResultListenerClass.onTestStart(ITestResultListenerClass.java:11)] - Test Case VerifyProductQuantityInCart Started
+[INFO] 15-02-2025 08:04:40 [main] [Listeners.IinvokedListenerClass.afterInvocation(IinvokedListenerClass.java:20)] - Test Case VerifyProductQuantityInCart failed
+[INFO] 15-02-2025 08:04:46 [main] [Listeners.ITestResultListenerClass.onTestStart(ITestResultListenerClass.java:11)] - Test Case RegisterWhileCheckout Started
+[INFO] 15-02-2025 08:04:47 [main] [Listeners.IinvokedListenerClass.afterInvocation(IinvokedListenerClass.java:20)] - Test Case RegisterWhileCheckout failed
+[INFO] 15-02-2025 08:04:51 [main] [Listeners.ITestResultListenerClass.onTestStart(ITestResultListenerClass.java:11)] - Test Case RegisterBeforeCheckout Started
+[INFO] 15-02-2025 08:04:52 [main] [Tests.TestCase015.RegisterBeforeCheckout(TestCase015.java:46)] - Username For this Test Case is User2025-02-15-8-4-16AM
+[INFO] 15-02-2025 08:04:52 [main] [Tests.TestCase015.RegisterBeforeCheckout(TestCase015.java:47)] - Email For this Test Case is Email@gmail.com2025-02-15-8-4-16AM

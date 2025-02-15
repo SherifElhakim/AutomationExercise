@@ -1,0 +1,37 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="AllTests_suite">
+    <listeners>
+        <listener class-name="Listeners.IinvokedListenerClass"></listener>
+        <listener class-name="Listeners.ITestResultListenerClass"></listener>
+    </listeners>
+    <test name="All">
+        <classes>
+            <class name="Tests.TestCase001"/>
+            <class name="Tests.TestCase002"/>
+            <class name="Tests.TestCase003"/>
+            <class name="Tests.TestCase004"/>
+            <class name="Tests.TestCase005"/>
+            <class name="Tests.TestCase006"/>
+            <class name="Tests.TestCase007"/>
+            <class name="Tests.TestCase008"/>
+            <class name="Tests.TestCase009"/>
+            <class name="Tests.TestCase010"/>
+            <class name="Tests.TestCase011"/>
+            <class name="Tests.TestCase012"/>
+            <class name="Tests.Testcase013"/>
+            <class name="Tests.Testcase014"/>
+            <class name="Tests.TestCase015"/>
+            <class name="Tests.TestCase016"/>
+            <class name="Tests.TestCase017"/>
+            <class name="Tests.TestCase018"/>
+            <class name="Tests.TestCase019"/>
+            <class name="Tests.TestCase020"/>
+            <class name="Tests.TestCase021"/>
+            <class name="Tests.TestCase022"/>
+            <class name="Tests.TestCase023"/>
+            <class name="Tests.TestCase024"/>
+            <class name="Tests.TestCase025"/>
+            <class name="Tests.TestCase026"/>
+        </classes>
+    </test>
+</suite>

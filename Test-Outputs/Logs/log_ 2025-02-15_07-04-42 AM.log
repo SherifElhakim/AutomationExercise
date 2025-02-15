@@ -1,0 +1,9 @@
+[INFO] 15-02-2025 07:04:42 [main] [Listeners.ITestResultListenerClass.onTestStart(ITestResultListenerClass.java:11)] - Test Case VerifyAddressesSimilarity Started
+[INFO] 15-02-2025 07:04:43 [main] [Tests.TestCase023.VerifyAddressesSimilarity(TestCase023.java:50)] - Username For this Test Case is User2025-02-15-7-4-35AM
+[INFO] 15-02-2025 07:04:43 [main] [Tests.TestCase023.VerifyAddressesSimilarity(TestCase023.java:51)] - Email For this Test Case is Email@gmail.com2025-02-15-7-4-35AM
+[INFO] 15-02-2025 07:06:06 [main] [Tests.TestCase023.VerifyAddressesSimilarity(TestCase023.java:78)] - Full name For this Test Case is Nobuko Moore
+[INFO] 15-02-2025 07:06:06 [main] [Tests.TestCase023.VerifyAddressesSimilarity(TestCase023.java:79)] - ZipCode For this Test Case is 06203
+[INFO] 15-02-2025 07:06:06 [main] [Tests.TestCase023.VerifyAddressesSimilarity(TestCase023.java:80)] - Mobile Number For this Test Case is 62860912683
+[INFO] 15-02-2025 07:06:06 [main] [Tests.TestCase023.VerifyAddressesSimilarity(TestCase023.java:81)] - First Address For this Test Case is 8572 Valentin Lodge
+[INFO] 15-02-2025 07:06:06 [main] [Tests.TestCase023.VerifyAddressesSimilarity(TestCase023.java:82)] - Second Address For this Test Case is 66151 Reynolds Burgs
+[INFO] 15-02-2025 07:06:10 [main] [Listeners.IinvokedListenerClass.afterInvocation(IinvokedListenerClass.java:20)] - Test Case VerifyAddressesSimilarity failed

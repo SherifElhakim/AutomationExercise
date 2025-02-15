@@ -1,10 +1,9 @@
 package Tests;
 
 import DriverFactory.DriverFactory;
-import Pages.CartPage;
-import Pages.HomePage;
-import Pages.ProductDetailsPage;
-import Pages.ProductsPage;
+import Pages.*;
+import Utilities.DataUtils;
+import Utilities.LogsUtils;
 import Utilities.Util;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
@@ -15,11 +14,15 @@ import Listeners.ITestResultListenerClass;
 import Listeners.IinvokedListenerClass;
 
 import java.io.FileNotFoundException;
+import java.time.Duration;
 
 import static DriverFactory.DriverFactory.getDriver;
 
 @Listeners({IinvokedListenerClass.class, ITestResultListenerClass.class})
-public class TestCase022 {
+public class TestCase025 {
+
+    private final String SubscriptionEmail = "Email@Subscription.com" + Util.getTimeStamp();
+
     @BeforeMethod
     public void setUp()
     {
@@ -29,25 +32,22 @@ public class TestCase022 {
     }
 
     @Test
-    public void AddRecommendedProductsToCart() throws FileNotFoundException {
+    public void VerifyScrollUpUsingArrow() throws FileNotFoundException
+    {
         //Verifying Visibility of HomePage
         Assert.assertTrue(new HomePage(getDriver()).VerifyHomePageVisibility());
-        Assert.assertTrue(new HomePage(getDriver()).VerifyRecommendedProductsVisibility());
 
-        //Adding Products to Cart And Clicking View Cart Button
-        String Name = new HomePage(getDriver()).GetNameOfRecommendedItem(4);
+        //Scrolling Down to Footer And Verifying The Visibility of Subscription
+        new HomePage(getDriver()).ScrollToBottom();
+        Assert.assertTrue(new HomePage(getDriver()).VerifySUBSCRIPTIONText());
 
-        new HomePage(getDriver()).AddRecommendedItemToCart(4)
-                .ClickViewCartButton();
-
-        //Verifying That the Product in Cart Has the Same Name
-        Assert.assertEquals(new CartPage(getDriver()).GetNameOfCartItem(1),Name);
-
+        //Clicking Scroll Up Arrow & Verifying Text Visibility
+        new HomePage(getDriver()).ClickScrollUpButton();
+        Assert.assertTrue(new HomePage(getDriver()).VerifyCarouselTextVisibility());
     }
 
     @AfterMethod
-    public void quit()
-    {
+    public void quit(){
         getDriver().quit();
     }
 }

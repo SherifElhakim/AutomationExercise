@@ -13,6 +13,10 @@ public class CheckoutPage {
     private final By PlaceOrderButton = By.xpath("//a[text()='Place Order']");
     private final By AddressDetailsHeading= By.xpath("//h2[text()='Address Details']");
     private final By ReviewOrderHeading= By.xpath("//h2[text()='Review Your Order']");
+    private final By DeliveryAddress1 = By.xpath("(//ul[@id='address_delivery']/li[contains(@class, 'address_address1') and contains(@class, 'address_address2')])[2]");
+    private final By DeliveryAddress2 = By.xpath("(//ul[@id='address_delivery']/li[contains(@class, 'address_address1') and contains(@class, 'address_address2')])[3]");
+    private final By BillingAddress1 = By.xpath("(//ul[@id='address_invoice']/li[contains(@class, 'address_address1') and contains(@class, 'address_address2')])[2]");
+    private final By BillingAddress2 = By.xpath("(//ul[@id='address_invoice']/li[contains(@class, 'address_address1') and contains(@class, 'address_address2')])[3]");
     //Actions
     public CheckoutPage VerifyAddressDetailsHeadingVisibility()
     {
@@ -36,6 +40,26 @@ public class CheckoutPage {
     {
         Util.ClickElement(driver, PlaceOrderButton);
         return new PaymentPage(driver);
+    }
+
+    public String GetFirstDeliveryAddressText()
+    {
+        return Util.getText(driver, DeliveryAddress1);
+    }
+
+    public String GetSecondDeliveryAddressText()
+    {
+        return Util.getText(driver, DeliveryAddress2);
+    }
+
+    public String GetFirstBillingAddressText()
+    {
+        return Util.getText(driver, BillingAddress1);
+    }
+
+    public String GetSecondBillingAddressText()
+    {
+        return Util.getText(driver, BillingAddress2);
     }
 
 }

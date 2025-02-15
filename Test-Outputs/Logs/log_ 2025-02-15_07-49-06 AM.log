@@ -1,0 +1,36 @@
+[INFO] 15-02-2025 07:49:06 [main] [Listeners.ITestResultListenerClass.onTestStart(ITestResultListenerClass.java:11)] - Test Case RegisterUser_ThenDelete Started
+[INFO] 15-02-2025 07:49:07 [main] [Tests.TestCase001.RegisterUser_ThenDelete(TestCase001.java:46)] - Username For this Test Case is User2025-02-15-7-49-01AM
+[INFO] 15-02-2025 07:49:07 [main] [Tests.TestCase001.RegisterUser_ThenDelete(TestCase001.java:47)] - Email For this Test Case is Email@gmail.com2025-02-15-7-49-01AM
+[INFO] 15-02-2025 07:50:30 [main] [Tests.TestCase001.RegisterUser_ThenDelete(TestCase001.java:74)] - Full name For this Test Case is Christopher Hessel
+[INFO] 15-02-2025 07:50:30 [main] [Tests.TestCase001.RegisterUser_ThenDelete(TestCase001.java:75)] - ZipCode For this Test Case is 28016
+[INFO] 15-02-2025 07:50:30 [main] [Tests.TestCase001.RegisterUser_ThenDelete(TestCase001.java:76)] - Mobile Number For this Test Case is 63209518142
+[INFO] 15-02-2025 07:50:36 [main] [Listeners.ITestResultListenerClass.onTestSuccess(ITestResultListenerClass.java:16)] - Test Case RegisterUser_ThenDelete Passed
+[INFO] 15-02-2025 07:50:40 [main] [Listeners.ITestResultListenerClass.onTestStart(ITestResultListenerClass.java:11)] - Test Case LoginUsingExistingAccount Started
+[INFO] 15-02-2025 07:50:46 [main] [Listeners.ITestResultListenerClass.onTestSuccess(ITestResultListenerClass.java:16)] - Test Case LoginUsingExistingAccount Passed
+[INFO] 15-02-2025 07:50:50 [main] [Listeners.ITestResultListenerClass.onTestStart(ITestResultListenerClass.java:11)] - Test Case LoginUsingIncorrectData Started
+[INFO] 15-02-2025 07:50:53 [main] [Tests.TestCase003.LoginUsingIncorrectData(TestCase003.java:50)] - Invalid Email for this Test Case is InvalidMail@Invalid.com2025-02-15-7-49-02AM
+[INFO] 15-02-2025 07:50:53 [main] [Tests.TestCase003.LoginUsingIncorrectData(TestCase003.java:51)] - Invalid Password for this Test Case is InvalidPassword2025-02-15-7-49-02AM
+[INFO] 15-02-2025 07:50:53 [main] [Listeners.ITestResultListenerClass.onTestSuccess(ITestResultListenerClass.java:16)] - Test Case LoginUsingIncorrectData Passed
+[INFO] 15-02-2025 07:50:57 [main] [Listeners.ITestResultListenerClass.onTestStart(ITestResultListenerClass.java:11)] - Test Case LogoutUser Started
+[INFO] 15-02-2025 07:51:04 [main] [Listeners.ITestResultListenerClass.onTestSuccess(ITestResultListenerClass.java:16)] - Test Case LogoutUser Passed
+[INFO] 15-02-2025 07:51:08 [main] [Listeners.ITestResultListenerClass.onTestStart(ITestResultListenerClass.java:11)] - Test Case RegisterUserUsingExistingEmail Started
+[INFO] 15-02-2025 07:51:11 [main] [Listeners.ITestResultListenerClass.onTestSuccess(ITestResultListenerClass.java:16)] - Test Case RegisterUserUsingExistingEmail Passed
+[INFO] 15-02-2025 07:51:14 [main] [Listeners.ITestResultListenerClass.onTestStart(ITestResultListenerClass.java:11)] - Test Case ContactUsForm Started
+[INFO] 15-02-2025 07:51:18 [main] [Listeners.ITestResultListenerClass.onTestSuccess(ITestResultListenerClass.java:16)] - Test Case ContactUsForm Passed
+[INFO] 15-02-2025 07:51:22 [main] [Listeners.ITestResultListenerClass.onTestStart(ITestResultListenerClass.java:11)] - Test Case ContactUsForm Started
+[INFO] 15-02-2025 07:51:23 [main] [Listeners.ITestResultListenerClass.onTestSuccess(ITestResultListenerClass.java:16)] - Test Case ContactUsForm Passed
+[INFO] 15-02-2025 07:51:27 [main] [Listeners.ITestResultListenerClass.onTestStart(ITestResultListenerClass.java:11)] - Test Case VerifyProductDetails Started
+[INFO] 15-02-2025 07:51:33 [main] [Listeners.IinvokedListenerClass.afterInvocation(IinvokedListenerClass.java:20)] - Test Case VerifyProductDetails failed
+[INFO] 15-02-2025 07:51:37 [main] [Listeners.ITestResultListenerClass.onTestStart(ITestResultListenerClass.java:11)] - Test Case SearchProduct Started
+[INFO] 15-02-2025 07:53:01 [main] [Listeners.ITestResultListenerClass.onTestSuccess(ITestResultListenerClass.java:16)] - Test Case SearchProduct Passed
+[INFO] 15-02-2025 07:53:05 [main] [Listeners.ITestResultListenerClass.onTestStart(ITestResultListenerClass.java:11)] - Test Case Subscribe Started
+[INFO] 15-02-2025 07:53:07 [main] [Listeners.IinvokedListenerClass.afterInvocation(IinvokedListenerClass.java:20)] - Test Case Subscribe failed
+[INFO] 15-02-2025 07:53:11 [main] [Listeners.ITestResultListenerClass.onTestStart(ITestResultListenerClass.java:11)] - Test Case SubscribeFromCartPage Started
+[INFO] 15-02-2025 07:53:13 [main] [Listeners.ITestResultListenerClass.onTestSuccess(ITestResultListenerClass.java:16)] - Test Case SubscribeFromCartPage Passed
+[INFO] 15-02-2025 07:53:16 [main] [Listeners.ITestResultListenerClass.onTestStart(ITestResultListenerClass.java:11)] - Test Case AddProductsToCart Started
+[INFO] 15-02-2025 07:53:22 [main] [Listeners.IinvokedListenerClass.afterInvocation(IinvokedListenerClass.java:20)] - Test Case AddProductsToCart failed
+[INFO] 15-02-2025 07:53:26 [main] [Listeners.ITestResultListenerClass.onTestStart(ITestResultListenerClass.java:11)] - Test Case VerifyProductQuantityInCart Started
+[INFO] 15-02-2025 07:53:32 [main] [Listeners.IinvokedListenerClass.afterInvocation(IinvokedListenerClass.java:20)] - Test Case VerifyProductQuantityInCart failed
+[INFO] 15-02-2025 07:53:35 [main] [Listeners.ITestResultListenerClass.onTestStart(ITestResultListenerClass.java:11)] - Test Case RegisterWhileCheckout Started
+[INFO] 15-02-2025 07:53:38 [main] [Tests.Testcase014.RegisterWhileCheckout(Testcase014.java:53)] - Username For this Test Case is User2025-02-15-7-49-02AM
+[INFO] 15-02-2025 07:53:38 [main] [Tests.Testcase014.RegisterWhileCheckout(Testcase014.java:54)] - Email For this Test Case is Email@gmail.com2025-02-15-7-49-02AM

@@ -1,0 +1,2 @@
+[INFO] 15-02-2025 08:03:59 [main] [Listeners.ITestResultListenerClass.onTestStart(ITestResultListenerClass.java:11)] - Test Case VerifyProductDetails Started
+[INFO] 15-02-2025 08:04:02 [main] [Listeners.ITestResultListenerClass.onTestSuccess(ITestResultListenerClass.java:16)] - Test Case VerifyProductDetails Passed

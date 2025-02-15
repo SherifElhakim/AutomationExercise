@@ -39,8 +39,8 @@ public class TestCase004 {
         Assert.assertTrue(new LoginPage(getDriver()).VerifyLoginTextVisibility());
 
         //Enter Valid Email & Password then Clicking Login
-        new LoginPage(getDriver()).SetLoginEmail(DataUtils.getJsonData("ValidLogin.","Email"))
-                .SetLoginPassword(DataUtils.getJsonData("ValidLogin.","Password"))
+        new LoginPage(getDriver()).SetLoginEmail(DataUtils.getJsonData("ValidLogin","Email"))
+                .SetLoginPassword(DataUtils.getJsonData("ValidLogin","Password"))
                 .ClickLoginButton();
 
         //Verifying "logged as" text Visibility

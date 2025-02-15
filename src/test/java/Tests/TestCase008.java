@@ -38,7 +38,7 @@ public class TestCase008 {
         Assert.assertTrue(Util.VerifyRedirectToPage(getDriver(), "https://www.automationexercise.com/products"));
 
         //Clicking on a Specific Product to Be Redirected to Product Details Page
-        new ProductsPage(getDriver()).ClickOnSpecificProduct(30);
+        new ProductsPage(getDriver()).ClickOnSpecificProduct(1);
 
         //Verify Visibility of Product Details
         Assert.assertTrue(new ProductDetailsPage(getDriver()).VerifyVisibilityOfProductName());

@@ -12,6 +12,7 @@ public class PaymentDonePage {
     private final By OrderConfirmedMessage = By.xpath("//p[text()='Congratulations! Your order has been confirmed!']");
     private final By ContinueButton = By.xpath("//a[@data-qa='continue-button']");
     private final By DeleteAccountButton = By.className("fa-trash-o");
+    private final By DownloadInvoiceButton = By.xpath("//a[text()='Download Invoice']");
 
 
     //Actions
@@ -30,5 +31,11 @@ public class PaymentDonePage {
     {
         Util.ClickElement(driver, DeleteAccountButton);
         return new DeleteAccountPage(driver);
+    }
+
+    public PaymentDonePage ClickDownloadInvoiceButton()
+    {
+        Util.ClickElement(driver, DownloadInvoiceButton);
+        return this;
     }
 }
